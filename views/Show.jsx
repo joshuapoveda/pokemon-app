@@ -1,10 +1,4 @@
 import React from "react";
-import pokemon from "../models/pokemon";
-
-const myStyle = {
-  color: "#ffffff",
-  backgroundColor: "#000000",
-};
 
 const Index = (props) => {
   const data = props;
@@ -19,4 +13,4 @@ const Index = (props) => {
   );
 };
 
-export default Index;
+export default Index
