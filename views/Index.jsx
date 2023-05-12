@@ -12,7 +12,7 @@ const Index = (props) => {
     <div style={myStyle}>
       <ul>
         {data.map((poke, i) => {
-          return <li>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</li>;
+          return <li><a href={`pokemon/${i}`}>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</a></li>;
         })}
       </ul>
     </div>
