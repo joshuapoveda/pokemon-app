@@ -1,5 +1,4 @@
 import React from "react";
-import pokemon from "../models/pokemon";
 
 const myStyle = {
   color: "#ffffff",
@@ -7,6 +6,7 @@ const myStyle = {
 };
 
 const Index = (props) => {
+
   const data = props.pokemon;
   return (
     <div style={myStyle}>

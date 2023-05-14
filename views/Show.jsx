@@ -1,16 +1,14 @@
 import React from "react";
 
-const Index = (props) => {
-  const data = props;
-  console.log(data)
+const Show= (props) => {
+  console.log(props)
   return (
       <div>  
       <h1>Gotta Catch 'Em All</h1>
-      <h2>{data.name}</h2>
-      <img src={data.img + '.jpg'}></img>
-      <h3><a href="/pokemon">Back</a></h3>
+      <h2>TEST</h2>
+      <p><a href='/pokemon'>Go Back</a></p>
     </div>
   );
 };
 
-export default Index
+export default Show
