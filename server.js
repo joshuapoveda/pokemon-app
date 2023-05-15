@@ -30,28 +30,28 @@ app.engine("jsx", require("jsx-view-engine").createEngine());
 
 app.get("/pokemon", (req, res) => {
   Pokemon.find({}, (error, allPokemon) => {
-    res.render("Index", {
+    res.render("../views/Index", {
       pokemon: allPokemon,
     });
   });
 });
 app.get("/pokemon/new", (req, res) => {
-  res.render("New");
+  res.render("../views/New");
 });
 
+app.post("/pokemon/", (req, res) => {
+  Pokemon.create(req.body, (error, createdPokemon) => {
+    res.redirect("/pokemon");
+  });
+});
 app.get("/pokemon/:id", (req, res) => {
   Pokemon.findById(req.params.id, (err, foundPokemon) => {
-    res.render("Show", {
+    res.render("../views/Show", {
       pokemon: foundPokemon,
     });
   });
 });
 
-app.post("/pokemon/", (req, res) => {
-  Pokemon.create(req.body, (error, createdPokemon) => {
-    res.send("/pokemon");
-  });
-});
 
 app.listen(port, () => {
   console.log(`listening on port ${port}!!!!!`);

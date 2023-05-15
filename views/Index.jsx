@@ -6,13 +6,13 @@ const myStyle = {
 };
 
 const Index = (props) => {
-
   const data = props.pokemon;
+
   return (
     <div style={myStyle}>
       <ul>
         {data.map((poke, i) => {
-          return <li><a href={`pokemon/${i}`}>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</a></li>;
+          return <li><a href={`pokemon/${data[i]._id}`}>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</a></li>;
         })}
       </ul>
     </div>
